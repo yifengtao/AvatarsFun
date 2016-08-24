@@ -11,7 +11,7 @@ function Gd = diffuse_bfs_dynamic(G,step,t)
         k = k+1;
         total_visited = sum(sum(visited));
         if mod(total_visited,step) == 0
-            imagesc(Gd);
+            imagesc(Gd(2:end-1,2:end-1));
             pause(t);
             prop = total_visited/sum(sum(G));
             fprintf('visited = %7d, proportion = %.1f%%\n', ...
@@ -62,5 +62,6 @@ function Gd = diffuse_bfs_dynamic(G,step,t)
             end
         end
     end
+    imagesc(Gd(2:end-1,2:end-1));
 end % end of: while size(route,1) ~= 0
 % Q.E.D.
