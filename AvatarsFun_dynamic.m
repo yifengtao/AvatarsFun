@@ -58,7 +58,7 @@ Psd = diffuse_bfs_dynamic(Ps,step,t);
 Psd = Psd(2:end-1,2:end-1);
 Psd = uint8(Psd*255);
 
-title('cropped_2:DFS');
+title('cropped_2:BFS');
 
 % DFS alg
 step = 100;
